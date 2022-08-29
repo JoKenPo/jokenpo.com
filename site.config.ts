@@ -1,8 +1,8 @@
-import { siteConfig } from './lib/site-config'
+import { siteConfig } from './src/lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: 'a169641eeb1b4e6e86136e634da13c8e',
+  rootNotionPageId: 'b569ac4fbbe84ef5bddea75d87f81594',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -44,7 +44,7 @@ export default siteConfig({
   // pageUrlOverrides: {
   //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
   //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
+  // }ß
   pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
