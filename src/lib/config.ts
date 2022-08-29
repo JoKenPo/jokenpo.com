@@ -150,7 +150,7 @@ export const fathomConfig = fathomId
   : undefined
 
 export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
-export const posthogConfig: posthog.Config = { // eslint-disable-line
+export const posthogConfig: any = {
   api_host: 'https://app.posthog.com'
 }
 
