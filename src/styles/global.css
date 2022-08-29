@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  --notion-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  --notion-font: 'JetBrains Mono', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
   font-family: var(--notion-font);
@@ -33,3 +33,4 @@ body {
   height: 1.2em !important;
   width: 1.2em !important;
 }
+
