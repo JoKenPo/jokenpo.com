@@ -10,10 +10,8 @@ import posthog from 'posthog-js'
 import { getEnv, getSiteConfig } from './get-config-value'
 import { NavigationLink } from './site-config'
 import {
-  PageUrlOverridesInverseMap,
-  PageUrlOverridesMap,
-  NavigationStyle,
-  Site
+  NavigationStyle, PageUrlOverridesInverseMap,
+  PageUrlOverridesMap, Site
 } from './types'
 
 export const rootNotionPageId: string = parsePageId(
@@ -152,7 +150,7 @@ export const fathomConfig = fathomId
   : undefined
 
 export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
-export const posthogConfig: posthog.Config = {
+export const posthogConfig: posthog.Config = { // eslint-disable-line
   api_host: 'https://app.posthog.com'
 }
 
