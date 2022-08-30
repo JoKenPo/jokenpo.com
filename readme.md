@@ -32,5 +32,5 @@ npm run dev
 
 ## Inspirations
 
-[Zeno Rocha](https://github.com/zenorocha/zenorocha.com)
+[Zeno Rocha](https://github.com/zenorocha/zenorocha.com) <br />
 [Travis Fischer](https://github.com/transitive-bullshit/nextjs-notion-starter-kit)
