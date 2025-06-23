@@ -1,4 +1,4 @@
-import { siteConfig } from './src/lib/site-config'
+import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'jokenpo.com',
+  name: 'jokenpo.dev',
   domain: 'nextjs-notion-starter-kit.jokenpo.it',
   author: 'Eduardo Almeida',
 
