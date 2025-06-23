@@ -20,7 +20,7 @@ export const FooterImpl: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode()
 
   const onToggleDarkMode = React.useCallback(
-    (e) => {
+    (e: any) => {
       e.preventDefault()
       toggleDarkMode()
     },

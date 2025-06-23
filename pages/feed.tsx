@@ -1,5 +1,5 @@
 import type { GetServerSideProps } from 'next'
-import { ExtendedRecordMap } from 'notion-types'
+import { type ExtendedRecordMap } from 'notion-types'
 import {
   getBlockParentPage,
   getBlockTitle,
@@ -8,10 +8,10 @@ import {
 } from 'notion-utils'
 import RSS from 'rss'
 
-import * as config from 'lib/config'
-import { getSiteMap } from 'lib/get-site-map'
-import { getSocialImageUrl } from 'lib/get-social-image-url'
-import { getCanonicalPageUrl } from 'lib/map-page-url'
+import * as config from '@/lib/config'
+import { getSiteMap } from '@/lib/get-site-map'
+import { getSocialImageUrl } from '@/lib/get-social-image-url'
+import { getCanonicalPageUrl } from '@/lib/map-page-url'
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   if (req.method !== 'GET') {
@@ -35,12 +35,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   })
 
   for (const pagePath of Object.keys(siteMap.canonicalPageMap)) {
-    const pageId = siteMap.canonicalPageMap[pagePath]
+    const pageId = siteMap.canonicalPageMap[pagePath]!
     const recordMap = siteMap.pageMap[pageId] as ExtendedRecordMap
     if (!recordMap) continue
 
     const keys = Object.keys(recordMap?.block || {})
-    const block = recordMap?.block?.[keys[0]]?.value
+    const block = recordMap?.block?.[keys[0]!]?.value
     if (!block) continue
 
     const parentPage = getBlockParentPage(block, recordMap)
@@ -67,7 +67,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       ? new Date(lastUpdatedTime)
       : publishedTime
         ? new Date(publishedTime)
-        : undefined
+        : new Date()
     const socialImageUrl = getSocialImageUrl(pageId)
 
     feed.item({
@@ -97,4 +97,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   return { props: {} }
 }
 
-export default () => null
+export default function noop() {
+  return null
+}
