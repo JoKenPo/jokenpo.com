@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Eduardo Almeida',
 
   // open graph metadata (optional)
-  description: 'jokenpo.com',
+  description: 'jokenpo.dev',
 
   // social usernames (optional)
   twitter: 'jokenpo',
